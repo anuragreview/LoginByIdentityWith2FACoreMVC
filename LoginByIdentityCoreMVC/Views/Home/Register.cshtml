@@ -1,0 +1,55 @@
+﻿@using LoginByIdentityCoreMVC.ViewModels
+@model RegisterViewModel
+
+@{
+    ViewBag.Title = "User Registration";
+}
+
+
+<div class="row">
+    <div class="col-md-4"></div>
+    <div class="col-md-4">
+        <h1>User Registration</h1>
+        <form method="post">
+            <div asp-validation-summary="All" class="text-danger"></div>
+            <div class="form-group">
+                <label asp-for="Email"></label>
+                <input asp-for="Email" class="form-control" />
+                <span asp-validation-for="Email" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="Password"></label>
+                <input asp-for="Password" class="form-control" />
+                <span asp-validation-for="Password" class="text-danger"></span>
+            </div>
+            <div class="form-group">
+                <label asp-for="ConfirmPassword"></label>
+                <input asp-for="ConfirmPassword" class="form-control" />
+                <span asp-validation-for="ConfirmPassword" class="text-danger"></span>
+            </div>
+            <div class="row">
+                <div class="col">
+                    <button type="submit" class="btn btn-primary mt-2">Register</button>
+                </div>
+                <div class="col float-end"><a href="@Url.Action(nameof(HomeController.Login))">Go to login</a></div>
+            </div>
+        </form>
+    </div>
+</div>
+
+@section Scripts{
+<script type="text/javascript">
+    $(function(){
+        let model=[{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"},{Email:"a@a.a",Password:"p2",ConfirmPassword:"ugiu"}];
+        $.ajax({url:"@Url.Action("Register2")",data:JSON.stringify(model),
+        type:"post",
+        contentType:"application/json",
+        success:function(d){
+
+
+        }
+        });
+    })  ;
+</script>
+
+}
